@@ -144,4 +144,3 @@ if (require.main === module) {
     process.exitCode = result.code;
   })().catch(error => {console.error(String(error));process.exitCode=2;});
 }
-

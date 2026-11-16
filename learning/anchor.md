@@ -78,7 +78,7 @@ With two specimens, Alice can do something more collective than run that one tes
 G=2(E_1+E_2),
 \qquad
 J_s=\sqrt2\,L_sG^{-1/2},
-\quad s\in\{1,2\},
+\quad s\in\lbrace 1,2\rbrace ,
 ```
 
 where $L_s$ Bell-contracts the selected specimen and orders the survivor. The inverse square root is zero on the kernel. It is a known Alice operator, independent of $\alpha,\beta$.

@@ -57,7 +57,7 @@ makes the displayed infidelity at most $`\epsilon`$. At fixed error, $`q=O(d)`$ 
 
 Alice's data registers are $`B_1,\ldots,B_m,C_1,\ldots,C_n`$. Each $`B_j`$ is the inner half of a Bell pair, while each $`C_k`$ contains one input copy. Bob's registers $`A_1,\ldots,A_m`$ do not participate in this circuit.
 
-For labels $`j\in\{1,\ldots,m\}`$ and $`k\in\{1,\ldots,n\}`$, let $`T_{jk}`$ be the rectangular map that contracts $`B_jC_k`$ with $`\langle\Phi_d|`$ and places the remaining $`B`$ registers and remaining $`C`$ registers in increasing original order. It acts on Alice's registers only. In particular,
+For labels $`j\in\lbrace 1,\ldots,m\rbrace `$ and $`k\in\lbrace 1,\ldots,n\rbrace `$, let $`T_{jk}`$ be the rectangular map that contracts $`B_jC_k`$ with $`\langle\Phi_d|`$ and places the remaining $`B`$ registers and remaining $`C`$ registers in increasing original order. It acts on Alice's registers only. In particular,
 
 ```math
 T_{jk}^{\dagger}T_{jk}=E_{jk},\qquad
@@ -81,7 +81,7 @@ Orthogonal labels remove cross terms, so
 G=d\sum_{j,k}E_{jk}.
 ```
 
-Each $`E_{jk}`$ is a projector, hence $`0\leq G\leq dmn\,I`$ and $`\|\mathcal A\|\leq1`$. This identity holds on the entire ordered Alice input space. It does not require a promise that the input lies in a symmetric subspace.
+Each $`E_{jk}`$ is a projector, hence $`0\leq G\leq dmn\,I`$ and $`\lVert \mathcal A\rVert \leq1`$. This identity holds on the entire ordered Alice input space. It does not require a promise that the input lies in a symmetric subspace.
 
 Here is a unitary projected encoding of $`\mathcal A`$.
 
@@ -153,7 +153,7 @@ This identity includes the output and every returned specimen together. It is no
 Chebyshev's inequality gives
 
 ```math
-\Pr\{X<1/4\}\leq\frac{16}{9}r.
+\Pr\lbrace X<1/4\rbrace \leq\frac{16}{9}r.
 ```
 
 Above this cutoff, the polynomial differs from one by at most $`\eta`$. Below it, $`|p-1|\leq2`$ and $`\sqrt X\leq1/2`$. Jensen's inequality gives $`\mathbb E\sqrt X\leq1`$. Consequently
