@@ -12,11 +12,11 @@ r=\frac{(d-1)(d+n)}{mn},\qquad
 \ell=\lceil\log_2d\rceil.
 ```
 
-Here $`r`$ is the relative variance of the Bell-sum operator on the supplied input, rather than a port index. Fix polynomial accuracy $`0<\eta<1/2`$ and total circuit accuracy $`0<\nu<1`$. There is a deterministic, correction-free port protocol with global squared fidelity
+Here $`r`$ is the relative variance of the Bell-sum operator on the supplied input, rather than a port index. Fix polynomial accuracy $`0\lt\eta\lt1/2`$ and total circuit accuracy $`0\lt\nu\lt1`$. There is a deterministic, correction-free port protocol with global squared fidelity
 
 ```math
 F_{\mathrm{global}}
-\geq \max\!\left\{0,1-\frac{41}{9}r-2\eta-2\nu\right\}.
+\geq \max\!\left\lbrace 0,1-\frac{41}{9}r-2\eta-2\nu\right\rbrace .
 ```
 
 The target is one teleported state, $`m-1`$ returned Bell pairs and $`n-1`$ returned input copies, in the specified common order. The bound is uniform over the unknown pure input. It permits arbitrarily small nonzero singular values of the known Bell-sum operator; no global spectral gap is promised.
@@ -39,12 +39,12 @@ An inverse here reverses the compiled known circuit; no inverse of a source, sta
 
 ```math
 G_{\mathrm{finite}}=
-O\!\left(G_0\,\operatorname{polylog}\frac{G_0}{\nu}\right).
+O\!\left(G_0\,\mathrm{polylog}\frac{G_0}{\nu}\right).
 ```
 
 Alice stores $`(m+n)\ell`$ input qubits and uses $`O(\ell+\log(mn+1))`$ additional clean workspace, including port labels, arithmetic work and a constant number of signal flags. Bob stores $`m\ell`$ input qubits. All-to-all connectivity and sequential gate count are used; geometric routing and parallel depth require their own accounting.
 
-For a desired global infidelity $`0<\epsilon<1`$, the explicit sufficient choice
+For a desired global infidelity $`0\lt\epsilon\lt1`$, the explicit sufficient choice
 
 ```math
 r\leq\frac{9\epsilon}{123},\qquad
@@ -57,7 +57,7 @@ makes the displayed infidelity at most $`\epsilon`$. At fixed error, $`q=O(d)`$ 
 
 Alice's data registers are $`B_1,\ldots,B_m,C_1,\ldots,C_n`$. Each $`B_j`$ is the inner half of a Bell pair, while each $`C_k`$ contains one input copy. Bob's registers $`A_1,\ldots,A_m`$ do not participate in this circuit.
 
-For labels $`j\in\{1,\ldots,m\}`$ and $`k\in\{1,\ldots,n\}`$, let $`T_{jk}`$ be the rectangular map that contracts $`B_jC_k`$ with $`\langle\Phi_d|`$ and places the remaining $`B`$ registers and remaining $`C`$ registers in increasing original order. It acts on Alice's registers only. In particular,
+For labels $`j\in\lbrace 1,\ldots,m\rbrace `$ and $`k\in\lbrace 1,\ldots,n\rbrace `$, let $`T_{jk}`$ be the rectangular map that contracts $`B_jC_k`$ with $`\langle\Phi_d|`$ and places the remaining $`B`$ registers and remaining $`C`$ registers in increasing original order. It acts on Alice's registers only. In particular,
 
 ```math
 T_{jk}^{\dagger}T_{jk}=E_{jk},\qquad
@@ -81,7 +81,7 @@ Orthogonal labels remove cross terms, so
 G=d\sum_{j,k}E_{jk}.
 ```
 
-Each $`E_{jk}`$ is a projector, hence $`0\leq G\leq dmn\,I`$ and $`\|\mathcal A\|\leq1`$. This identity holds on the entire ordered Alice input space. It does not require a promise that the input lies in a symmetric subspace.
+Each $`E_{jk}`$ is a projector, hence $`0\leq G\leq dmn\,I`$ and $`\lVert \mathcal A\rVert \leq1`$. This identity holds on the entire ordered Alice input space. It does not require a promise that the input lies in a symmetric subspace.
 
 Here is a unitary projected encoding of $`\mathcal A`$.
 
@@ -135,7 +135,7 @@ This section analyzes the finite circuit on the supplied identical-copy input $`
 
 ```math
 \mathbb E X=1,\qquad
-\operatorname{Var}X=r,\qquad
+\mathrm{Var}X=r,\qquad
 f_{\mathrm{pol}}=(\mathbb E\sqrt X)^2\geq\frac1{1+r},
 ```
 
@@ -153,7 +153,7 @@ This identity includes the output and every returned specimen together. It is no
 Chebyshev's inequality gives
 
 ```math
-\Pr\{X<1/4\}\leq\frac{16}{9}r.
+\Pr\lbrace X<1/4\rbrace \leq\frac{16}{9}r.
 ```
 
 Above this cutoff, the polynomial differs from one by at most $`\eta`$. Below it, $`|p-1|\leq2`$ and $`\sqrt X\leq1/2`$. Jensen's inequality gives $`\mathbb E\sqrt X\leq1`$. Consequently

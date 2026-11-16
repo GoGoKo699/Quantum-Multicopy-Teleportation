@@ -4,7 +4,7 @@ The [frontier](model.md) compares two physically different resources: stored Bel
 
 ## The intermediate regime
 
-Take $n$ of order $\sqrt d$. The fixed-error port budget is of order $d^{3/2}$. With only one input specimen it is of order $d^2$. More generally, for any fixed $0<\alpha<1$,
+Take $n$ of order $\sqrt d$. The fixed-error port budget is of order $d^{3/2}$. With only one input specimen it is of order $d^2$. More generally, for any fixed $0\lt\alpha\lt1$,
 
 ```math
 n=\Theta(d^\alpha)

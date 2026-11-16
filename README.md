@@ -41,6 +41,21 @@ Start with the [scientific route](science/README.md) and [model and exact claims
 
 The measurement and polar-normalization machinery are inherited from port-based teleportation, entanglement recycling and [Quantum Program Composition](https://github.com/GoGoKo699/Quantum-Program-Composition). The contribution here is the finite-input resource frontier, its port-selection converse, and an implementation respecting the sender/receiver boundary. The [attribution account](references/RELATED_WORK.md) separates these claims.
 
+## Learn the mechanism
+
+The [learning route](learning/README.md) begins with a concrete teleportation task and connects it to the construction and converse. Its [30 milestones](learning/milestones.md) move from states and instruments to the complete resource law. The selected educational anchor is John Watrous, *The Theory of Quantum Information* (2018); the [source bridge](learning/anchor.md) maps its foundations to this project's notation and identifies the arguments supplied here.
+
+## Reproduce the finite checks
+
+With Python 3.10 or later, run these commands from the repository root:
+
+```bash
+python3 -m pip install -r requirements.txt
+python3 verification/verify.py
+```
+
+The [verification account](verification/README.md) explains the checked physical instruments, Bell moments, Haar identities, projected encoding, and noisy channels. Dense finite checks support those identities; the general bounds and finite-precision circuit costs use the analytical proofs.
+
 ## Scope
 
 All supplied specimens, collective gates and workspace count. There is no QRAM or free state-loading oracle. The repeated inputs are independent copies of one pure state. Global return is approximate and one-shot; repeated reuse needs its own error budget. Optimal exact heralded performance and vanishing-error constants are not established. The copy advantage is not an end-to-end runtime or hardware crossover claim.

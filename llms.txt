@@ -11,5 +11,8 @@ This repository studies correction-free port teleportation with m independent Be
 - Unequal supplies, one-port conditional/unconditional distinction and noisy example: science/examples.md
 - Primary comparisons, inherited mechanisms and claim ownership: references/RELATED_WORK.md
 - Reproduction commands, actual reports and finite scope: verification/README.md
+- Accessible story and learning entrypoint: learning/README.md
+- Exactly 30 shared understanding targets, prerequisites and scientific pointers: learning/milestones.md
+- Watrous (2018) notation, chapter bridge and missing project-specific steps: learning/anchor.md
 
-The connected scientific route begins at science/README.md. The README gives a compact entrypoint. Do not infer an unrestricted programmable-processor converse, arbitrary entangled-input channel simulation, indefinite reuse or a hardware runtime advantage.
+The connected scientific route begins at science/README.md. For study, start at learning/README.md, use learning/anchor.md for foundations and follow learning/milestones.md into the authoritative science pages. The README gives a compact entrypoint. Do not infer an unrestricted programmable-processor converse, arbitrary entangled-input channel simulation, indefinite reuse or a hardware runtime advantage.
