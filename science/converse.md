@@ -8,28 +8,31 @@ The [construction](construction.md) also gives a stored-channel retrieval protoc
 
 **Theorem 2.** Suppose the resource consists of $`m`$ independent $`d`$-dimensional maximally entangled pairs and Alice receives $`n`$ identical copies of an unknown pure input. For every deterministic correction-free port-selection protocol, its Haar-average output fidelity obeys
 
+**Equation (1)**
+
 ```math
 \overline F\le
 \min\left\lbrace 
 1,\ \frac md,\ \frac{d+mn}{d(d+n)}
 \right\rbrace .
-\tag{1}
 ```
 
 In particular, a protocol whose output fidelity is at least $`F_0`$ for every pure input must satisfy
+
+**Equation (2)**
 
 ```math
 m\ge F_0d,
 \qquad
 mn\ge F_0d(d+n)-d.
-\tag{2}
 ```
 
 The second inequality can equivalently be written
 
+**Equation (3)**
+
 ```math
 m\ge F_0d+\frac{F_0d^2-d}{n}.
-\tag{3}
 ```
 
 These are exact finite-parameter necessary inequalities. They are not an exact formula for the optimal fidelity or for the success probability of exact heralded teleportation.
@@ -40,11 +43,12 @@ Let $`C_1,\ldots,C_n`$ be the input registers, and let Alice's halves of the res
 
 Because Bob's final action is only to keep the port specified by Alice, all of Alice's measurements, internal adaptivity and classical processing can be combined into effects
 
+**Equation (4)**
+
 ```math
 M_r\ge0,
 \qquad
 \sum_{r=1}^m M_r=I
-\tag{4}
 ```
 
 on $`C_1\cdots C_nB_1\cdots B_m`$. Fixed local ancillas can be absorbed into these effects. Alice's retained quantum outputs are irrelevant to Bob's reduced output after they are traced out. Coarse-graining all histories that select the same port therefore gives exactly (4).
@@ -53,6 +57,8 @@ A deterministic protocol may include an internal failure outcome, but it must st
 
 For a fixed input $`\psi=|\psi\rangle\langle\psi|`$, Bell-state contraction gives the fidelity contribution of port $`r`$ as
 
+**Equation (5)**
+
 ```math
 f_r(\psi)
 =\frac1{d^m}\mathrm{Tr}\left[
@@ -60,7 +66,6 @@ M_r\left(
 \psi_C^{\otimes n}\otimes\psi_{B_r}^{T}
 \otimes I_{B_{\ne r}}
 \right)\right].
-\tag{5}
 ```
 
 The transpose is in the specified Bell basis. Summing (5) over $`r`$ gives the deterministic output fidelity $`F(\psi)`$.
@@ -77,14 +82,17 @@ D_n=\binom{d+n-1}{n}.
 
 For one distinguished port half $`B`$, define
 
+**Equation (6)**
+
 ```math
 R_n=\int \psi_C^{\otimes n}\otimes\psi_B^T\,d\psi,
 \qquad
 Q_{sB}=d|\Phi_d\rangle\langle\Phi_d|_{C_sB}.
-\tag{6}
 ```
 
 Here $`d\psi`$ is normalized Haar measure over pure states. The required identity is
+
+**Equation (7)**
 
 ```math
 R_n=
@@ -93,17 +101,19 @@ P_n\otimes I_B+
 \sum_{s=1}^n
 (P_n\otimes I_B)Q_{sB}(P_n\otimes I_B)
 }{(d+n)D_n}.
-\tag{7}
 ```
 
 **Proof.** The symmetric-subspace Haar identity gives
 
+**Equation (8)**
+
 ```math
 R_n=\frac{P_{n+1}^{T_B}}{D_{n+1}}.
-\tag{8}
 ```
 
 Resolve permutations of $`n+1`$ systems into $`n+1`$ cosets of permutations of the first $`n`$. If $`V_{sB}`$ swaps $`C_s`$ with $`B`$, this yields
+
+**Equation (9)**
 
 ```math
 P_{n+1}
@@ -111,7 +121,6 @@ P_{n+1}
 (P_n\otimes I_B)
 \left(I+\sum_{s=1}^n V_{sB}\right)
 (P_n\otimes I_B).
-\tag{9}
 ```
 
 Partial transpose on $`B`$ sends $`V_{sB}`$ to $`Q_{sB}`$. It leaves the two $`P_n`$ factors untouched because they act only on $`C`$. Finally,
@@ -128,16 +137,19 @@ The identity is a symmetric-subspace calculation. It does not require a classica
 
 Insert (7) into the Haar average of (5):
 
+**Equation (10)**
+
 ```math
 \overline F
 =\frac1{d^m}\sum_{r=1}^m
 \mathrm{Tr}\left[
 M_r\left(R_{n,r}\otimes I_{B_{\ne r}}\right)
 \right].
-\tag{10}
 ```
 
 The $`P_n\otimes I`$ terms in this expression have the same operator for every $`r`$. Completeness of the POVM gives their total contribution exactly:
+
+**Equation (11)**
 
 ```math
 \begin{aligned}
@@ -147,17 +159,19 @@ The $`P_n\otimes I`$ terms in this expression have the same operator for every $
 &=\frac{\mathrm{Tr}(P_n\otimes I)}{d^m(d+n)D_n}\\
 &=\frac1{d+n}.
 \end{aligned}
-\tag{11}
 ```
 
 For a positive Bell term, use $`0\le M_r\le I`$. For any positive operator $`T`$, this implies $`\mathrm{Tr}(M_rT)\le\mathrm{Tr}(T)`$. Also,
 
+**Equation (12)**
+
 ```math
 \mathrm{Tr}_B Q_{sB}=I_{C_s}.
-\tag{12}
 ```
 
 Thus, for each pair $`(r,s)`$,
+
+**Equation (13)**
 
 ```math
 \begin{aligned}
@@ -170,15 +184,15 @@ M_r\bigl((P_n\otimes I)Q_{sB_r}(P_n\otimes I)
 \frac{d^{m-1}\mathrm{Tr}[(P_n\otimes I)Q_{sB_r}]}{d^m(d+n)D_n}
 =\frac1{d(d+n)}.
 \end{aligned}
-\tag{13}
 ```
 
 There are $`mn`$ such terms. Adding (11) and (13) proves
 
+**Equation (14)**
+
 ```math
 \overline F\le\frac1{d+n}+\frac{mn}{d(d+n)}
 =\frac{d+mn}{d(d+n)}.
-\tag{14}
 ```
 
 This argument permits all coherent processing and adaptivity on Alice's side. Its restriction is the physical output rule at Bob, rather than a restriction on Alice's estimator.
@@ -187,18 +201,20 @@ This argument permits all coherent processing and adaptivity on Alice's side. It
 
 There is also a simple bound that makes the port floor transparent. For fixed $`\psi`$, let $`\sigma_r(\psi)`$ be Bob's unnormalised state in port $`A_r`$ on the event that Alice selects it. Since the corresponding Alice effect satisfies $`M_r\le I`$, positivity gives
 
+**Equation (15)**
+
 ```math
 0\le\sigma_r(\psi)\le\frac{I_{A_r}}d.
-\tag{15}
 ```
 
 The upper operator is the port marginal when Alice's outcome is ignored. Alice's local processing cannot alter that marginal. Therefore
+
+**Equation (16)**
 
 ```math
 \langle\psi|\sigma_r(\psi)|\psi\rangle\le\frac1d,
 \qquad
 F(\psi)\le\frac md.
-\tag{16}
 ```
 
 This bound already holds pointwise, hence also after Haar averaging. Together with the trivial ceiling $`1`$ and (14), it proves (1).
@@ -209,24 +225,27 @@ At large dimension and fixed positive target fidelity, (14) already exposes the 
 
 Fix $`F_0\in(0,1)`$ independently of $`d,n`$, and let $`m_{F_0}(d,n)`$ be the least number of ports giving uniform output fidelity at least $`F_0`$. The [construction](construction.md) supplies the sufficient condition
 
+**Equation (17)**
+
 ```math
 m\ge\frac{F_0}{1-F_0}\frac{(d-1)(d+n)}n.
-\tag{17}
 ```
 
 The exact lower inequalities are (2). For example, whenever $`d\ge2/F_0`$, (3) gives
 
+**Equation (18)**
+
 ```math
 m\ge F_0d+\frac{F_0d^2}{2n}.
-\tag{18}
 ```
 
 Equations (17) and (18), with an integer ceiling in the construction, establish uniformly over $`n\ge1`$ that
 
+**Equation (19)**
+
 ```math
 m_{F_0}(d,n)
 =\Theta_{F_0}\left(d+\frac{d^2}{n}\right).
-\tag{19}
 ```
 
 The constants depend on the fixed target fidelity. This is a matched asymptotic resource law, not an assertion that either finite bound in (1) is always attained. In particular, it leaves the optimal dependence on vanishing infidelity and the exact heralded multicopy/multiport success probability open.
