@@ -58,8 +58,8 @@ Every protocol in the contract above obeys
 
 ```math
 F_{\mathrm{av}}
-\le \min\left\{1,\frac{m}{d},
-\frac{d+mn}{d(d+n)}\right\}.
+\le \min\left\lbrace 1,\frac{m}{d},
+\frac{d+mn}{d(d+n)}\right\rbrace .
 ```
 
 This converse applies to output fidelity alone, allows every input specimen and every resource pair to be consumed, and imposes no restriction on Alice's collective measurement or classical computation. Requiring a joint return cannot evade it. The [proof](converse.md) uses an exact Haar score operator and positivity, with a separate no-signalling bound.
@@ -105,7 +105,7 @@ For a CPTP map $\mathcal E:\mathcal L(\mathbb C^d)\to\mathcal L(\mathbb C^{d'})$
 
 ```math
 J_{\mathcal E}
-=(\mathcal E_A\otimes\operatorname{id}_B)
+=(\mathcal E_A\otimes\mathrm{id}_B)
  (|\Phi_d\rangle\langle\Phi_d|).
 ```
 

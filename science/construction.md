@@ -72,7 +72,7 @@ Here and below, an inner operator is tensored with the identity on Bob's registe
 $$
 \sum_{r,s}J_{rs}^{\dagger}J_{rs}
 =G^{-1/2}\left(\sum_{r,s}dE_{rs}\right)G^{-1/2}
-=\Pi_{\operatorname{supp}G}\le I.
+=\Pi_{\mathrm{supp}G}\le I.
 \tag{6}
 $$
 
@@ -81,10 +81,10 @@ Thus these maps form an incomplete instrument. Alice can retain $(r,s)$ as an in
 The complementary outcome must also respect the port restriction. Alice measures the kernel effect
 
 $$
-\Pi_0=I-\Pi_{\operatorname{supp}G},
+\Pi_0=I-\Pi_{\mathrm{supp}G},
 $$
 
-discards $B_1,C_1$, and always signals port $1$. Bob keeps $A_1$, and both parties retain their other registers in the prescribed order. This is a completely positive branch with trace $\operatorname{Tr}(\Pi_0\rho)$, so it completes (6) to a trace-preserving protocol. It needs no preparation or correction at Bob. Its contribution to fidelity with the target is nonnegative, which is all the proof will use.
+discards $B_1,C_1$, and always signals port $1$. Bob keeps $A_1$, and both parties retain their other registers in the prescribed order. This is a completely positive branch with trace $\mathrm{Tr}(\Pi_0\rho)$, so it completes (6) to a trace-preserving protocol. It needs no preparation or correction at Bob. Its contribution to fidelity with the target is nonnegative, which is all the proof will use.
 
 The normalization in (5) is a polar or pretty-good-measurement construction. Square-root measurements and the accompanying moment method are established tools; related port measurements and return guarantees appear in generalized teleportation and entanglement recycling. The two-pool [Quantum Program Composition construction](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/construction.md) supplies the direct precursor of this instrument and routing argument. The new input marginal and its moments below are different. See [related work](../references/RELATED_WORK.md) for attribution and the operational comparisons.
 
@@ -121,8 +121,8 @@ Let $P$ project onto
 
 $$
 \mathcal S
-=\operatorname{Sym}^{m}(\mathbb C^{d^2})
- \otimes\operatorname{Sym}^{n}(\mathbb C^d).
+=\mathrm{Sym}^{m}(\mathbb C^{d^2})
+ \otimes\mathrm{Sym}^{n}(\mathbb C^d).
 \tag{9}
 $$
 
@@ -166,7 +166,7 @@ $$
 K=MG_{\mathcal S}^{-1/2}
 $$
 
-is zero on the kernel and obeys $K^{\dagger}K=\Pi_{\operatorname{supp}G_{\mathcal S}}$. Since $G^{-1/2}|v\rangle$ remains in $\mathcal S$, every routed useful branch satisfies
+is zero on the kernel and obeys $K^{\dagger}K=\Pi_{\mathrm{supp}G_{\mathcal S}}$. Since $G^{-1/2}|v\rangle$ remains in $\mathcal S$, every routed useful branch satisfies
 
 $$
 J_{rs}|v\rangle=\frac1{\sqrt{mn}}K|v\rangle.
@@ -195,7 +195,7 @@ $$
 \tag{15}
 $$
 
-Write $\mathbb E[X]=\operatorname{Tr}(\rho_{\mathrm{in}}X)$ for inner operators. The following identities hold for any pure $|\psi\rangle$:
+Write $\mathbb E[X]=\mathrm{Tr}(\rho_{\mathrm{in}}X)$ for inner operators. The following identities hold for any pure $|\psi\rangle$:
 
 $$
 \mathbb E[Q_{rs}]=\frac1d,
@@ -243,7 +243,7 @@ $$
 \mathbb E[G]&=\frac{mn}{d}=\mu,\\
 \mathbb E[G^2]&=mn+\frac{mn(n-1)}d
                      +\frac{mn^2(m-1)}{d^2},\\
-\operatorname{Var}(G)&=mn\left[1+\frac{n-1}{d}-\frac{n}{d^2}\right].
+\mathrm{Var}(G)&=mn\left[1+\frac{n-1}{d}-\frac{n}{d^2}\right].
 \end{aligned}
 \tag{19}
 $$
@@ -311,7 +311,7 @@ $$
 
 This is the familiar moment-type deterministic approximate PBT bound, now retaining the unused pairs in the target. It should not be confused with the exact success probability of a probabilistic PBT protocol with fixed maximally entangled resources.
 
-For one port, the useful branch is special. On the symmetric $C$ sector, the nonzero spectrum of $G$ consists of the single value $d+n-1$. One way to see this is to use $M=\sqrt{dn}L$ from (11). Its image is $\mathbb C^d_A\otimes\operatorname{Sym}^{n-1}(\mathbb C^d)$, and
+For one port, the useful branch is special. On the symmetric $C$ sector, the nonzero spectrum of $G$ consists of the single value $d+n-1$. One way to see this is to use $M=\sqrt{dn}L$ from (11). Its image is $\mathbb C^d_A\otimes\mathrm{Sym}^{n-1}(\mathbb C^d)$, and
 
 $$
 MM^{\dagger}=(d+n-1)I
@@ -322,7 +322,7 @@ $$
 To verify (25), let $P_n$ be the $n$-fold symmetric projector. Unitary invariance and its trace give
 
 $$
-\operatorname{Tr}_{C_1}P_n
+\mathrm{Tr}_{C_1}P_n
 =\frac{D_n}{D_{n-1}}P_{n-1}
 =\frac{d+n-1}{n}P_{n-1},
 \qquad
@@ -348,7 +348,7 @@ Let $\mathcal E:\mathcal L(\mathbb C^d)\to\mathcal L(\mathbb C^{d'})$ be any CPT
 
 $$
 J_{\mathcal E}
-=(\mathcal E_A\otimes\operatorname{id}_B)
+=(\mathcal E_A\otimes\mathrm{id}_B)
  (|\Phi_d\rangle\langle\Phi_d|).
 $$
 

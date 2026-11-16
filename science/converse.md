@@ -10,9 +10,9 @@ The [construction](construction.md) also gives a stored-channel retrieval protoc
 
 $$
 \overline F\le
-\min\left\{
+\min\left\lbrace 
 1,\ \frac md,\ \frac{d+mn}{d(d+n)}
-\right\}.
+\right\rbrace .
 \tag{1}
 $$
 
@@ -55,7 +55,7 @@ For a fixed input $\psi=|\psi\rangle\langle\psi|$, Bell-state contraction gives 
 
 $$
 f_r(\psi)
-=\frac1{d^m}\operatorname{Tr}\left[
+=\frac1{d^m}\mathrm{Tr}\left[
 M_r\left(
 \psi_C^{\otimes n}\otimes\psi_{B_r}^{T}
 \otimes I_{B_{\ne r}}
@@ -70,7 +70,7 @@ The transpose is in the specified Bell basis. Summing (5) over $r$ gives the det
 Write
 
 $$
-P_n=P_{\operatorname{Sym}^n(\mathbb C^d)},
+P_n=P_{\mathrm{Sym}^n(\mathbb C^d)},
 \qquad
 D_n=\binom{d+n-1}{n}.
 $$
@@ -131,7 +131,7 @@ Insert (7) into the Haar average of (5):
 $$
 \overline F
 =\frac1{d^m}\sum_{r=1}^m
-\operatorname{Tr}\left[
+\mathrm{Tr}\left[
 M_r\left(R_{n,r}\otimes I_{B_{\ne r}}\right)
 \right].
 \tag{10}
@@ -142,18 +142,18 @@ The $P_n\otimes I$ terms in this expression have the same operator for every $r$
 $$
 \begin{aligned}
 \frac1{d^m(d+n)D_n}
-\sum_r\operatorname{Tr}
+\sum_r\mathrm{Tr}
 [M_r(P_n\otimes I_{B_1\cdots B_m})]
-&=\frac{\operatorname{Tr}(P_n\otimes I)}{d^m(d+n)D_n}\\
+&=\frac{\mathrm{Tr}(P_n\otimes I)}{d^m(d+n)D_n}\\
 &=\frac1{d+n}.
 \end{aligned}
 \tag{11}
 $$
 
-For a positive Bell term, use $0\le M_r\le I$. For any positive operator $T$, this implies $\operatorname{Tr}(M_rT)\le\operatorname{Tr}(T)$. Also,
+For a positive Bell term, use $0\le M_r\le I$. For any positive operator $T$, this implies $\mathrm{Tr}(M_rT)\le\mathrm{Tr}(T)$. Also,
 
 $$
-\operatorname{Tr}_B Q_{sB}=I_{C_s}.
+\mathrm{Tr}_B Q_{sB}=I_{C_s}.
 \tag{12}
 $$
 
@@ -162,12 +162,12 @@ Thus, for each pair $(r,s)$,
 $$
 \begin{aligned}
 &\frac1{d^m(d+n)D_n}
-\operatorname{Tr}\left[
+\mathrm{Tr}\left[
 M_r\bigl((P_n\otimes I)Q_{sB_r}(P_n\otimes I)
          \otimes I_{B_{\ne r}}\bigr)
 \right]\\
 &\hspace{2em}\le
-\frac{d^{m-1}\operatorname{Tr}[(P_n\otimes I)Q_{sB_r}]}{d^m(d+n)D_n}
+\frac{d^{m-1}\mathrm{Tr}[(P_n\otimes I)Q_{sB_r}]}{d^m(d+n)D_n}
 =\frac1{d(d+n)}.
 \end{aligned}
 \tag{13}

@@ -12,11 +12,11 @@ r=\frac{(d-1)(d+n)}{mn},\qquad
 \ell=\lceil\log_2d\rceil.
 ```
 
-Here $`r`$ is the relative variance of the Bell-sum operator on the supplied input, rather than a port index. Fix polynomial accuracy $`0<\eta<1/2`$ and total circuit accuracy $`0<\nu<1`$. There is a deterministic, correction-free port protocol with global squared fidelity
+Here $`r`$ is the relative variance of the Bell-sum operator on the supplied input, rather than a port index. Fix polynomial accuracy $`0\lt\eta\lt1/2`$ and total circuit accuracy $`0\lt\nu\lt1`$. There is a deterministic, correction-free port protocol with global squared fidelity
 
 ```math
 F_{\mathrm{global}}
-\geq \max\!\left\{0,1-\frac{41}{9}r-2\eta-2\nu\right\}.
+\geq \max\!\left\lbrace 0,1-\frac{41}{9}r-2\eta-2\nu\right\rbrace .
 ```
 
 The target is one teleported state, $`m-1`$ returned Bell pairs and $`n-1`$ returned input copies, in the specified common order. The bound is uniform over the unknown pure input. It permits arbitrarily small nonzero singular values of the known Bell-sum operator; no global spectral gap is promised.
@@ -39,12 +39,12 @@ An inverse here reverses the compiled known circuit; no inverse of a source, sta
 
 ```math
 G_{\mathrm{finite}}=
-O\!\left(G_0\,\operatorname{polylog}\frac{G_0}{\nu}\right).
+O\!\left(G_0\,\mathrm{polylog}\frac{G_0}{\nu}\right).
 ```
 
 Alice stores $`(m+n)\ell`$ input qubits and uses $`O(\ell+\log(mn+1))`$ additional clean workspace, including port labels, arithmetic work and a constant number of signal flags. Bob stores $`m\ell`$ input qubits. All-to-all connectivity and sequential gate count are used; geometric routing and parallel depth require their own accounting.
 
-For a desired global infidelity $`0<\epsilon<1`$, the explicit sufficient choice
+For a desired global infidelity $`0\lt\epsilon\lt1`$, the explicit sufficient choice
 
 ```math
 r\leq\frac{9\epsilon}{123},\qquad
@@ -135,7 +135,7 @@ This section analyzes the finite circuit on the supplied identical-copy input $`
 
 ```math
 \mathbb E X=1,\qquad
-\operatorname{Var}X=r,\qquad
+\mathrm{Var}X=r,\qquad
 f_{\mathrm{pol}}=(\mathbb E\sqrt X)^2\geq\frac1{1+r},
 ```
 
