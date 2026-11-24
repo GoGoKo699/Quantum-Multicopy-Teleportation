@@ -205,8 +205,8 @@ The selected educational anchor is **John Watrous, *The Theory of Quantum Inform
 - **Central question:** Can combining all ports with all specimens help when each accepted branch must return every spare pair?
 - **Understanding target:** Explain why an exact Bell-pair return removes the spare half from the branch effect, and why covariance leaves separate weights for a canonical contraction subspace and its complement. State $`p_0=\max(m,n)/[d(\max(m,n)+d-1)]`$ and recover the single-port and one-specimen endpoints.
 - **Dependencies and story role:** M06–M09, M13–M14 and M20–M22. Brings the return requirement into the converse and identifies the attaining endpoint protocol.
-- **Conceptual connection:** Completeness constrains the sum over possible selected ports. With exact spare returns and one pair spent, the larger supply determines the optimum.
-- **Source pointers:** Watrous §§2.2.2, 2.3.1 and 7.2.1, [endpoint checks](../science/construction.md#5-the-two-endpoint-checks), and [exact-return proof](../science/exact-return.md).
+- **Conceptual connection:** Completeness constrains the sum over possible selected ports. With exact spare returns and one pair spent, the larger supply determines the optimum. The same norm can be tracked into the exact-return laws for composition and purification by identifying the different output maps.
+- **Source pointers:** Watrous §§2.2.2, 2.3.1 and 7.2.1, [endpoint checks](../science/construction.md#5-the-two-endpoint-checks), [exact-return proof](../science/exact-return.md), and [three-project comparison](../science/exact-return.md#how-exact-return-compares-across-three-tasks).
 
 ### M26 — Retrieve a noisy stored channel
 

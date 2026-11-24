@@ -10,6 +10,8 @@ The exact statement and all qualifications live in [model and frontier](model.md
 
 The [exact-return theorem](exact-return.md) gives the sharp success probability for exact output and exact Bell-pair return, the success–fidelity frontier, and the number of Bell pairs that must be spent for constant exact-output success.
 
+The [comparison across the three projects](exact-return.md#how-exact-return-compares-across-three-tasks) tracks how one contraction norm governs exact return in port teleportation, unitary Choi composition and canonical purification from pure conjugate samples.
+
 [Examples and interpretation](examples.md) explain why the intermediate unequal-budget regime is consequential, why the balanced point alone is not an advantage over input estimation, and how the channel-retrieval application differs from arbitrary channel simulation. [Related work](../references/RELATED_WORK.md) credits the inherited machinery and fixes the comparison boundaries. [Verification](../verification/README.md) records the finite checks and what they do not establish.
 
 The results cover deterministic approximation and heralded exact return under correction-free port selection. Stored-channel retrieval inherits its construction; its converse is not asserted for unrestricted global programmable processors.

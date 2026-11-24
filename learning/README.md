@@ -12,6 +12,7 @@ The sole educational anchor is **John Watrous, *The Theory of Quantum Informatio
 | Follow the complete conceptual progression | [Milestones](milestones.md), with [science entrypoint](../science/README.md) alongside |
 | Work through the deterministic protocol and its joint fidelity guarantee | [Construction](../science/construction.md) |
 | Find the exact success probability, the conditional fidelity tradeoff, or the cost of spending several pairs | [Exact return](../science/exact-return.md) |
+| Follow the contraction norm into Choi composition and canonical purification | [Three-project comparison](../science/exact-return.md#how-exact-return-compares-across-three-tasks) |
 | Understand why every sender measurement obeys the same resource order | [Converse](../science/converse.md) |
 | Inspect known gates, storage, routing and finite precision | [Implementation](../science/implementation.md) |
 | Compare useful regimes and prior results | [Examples](../science/examples.md) and [related work](../references/RELATED_WORK.md) |

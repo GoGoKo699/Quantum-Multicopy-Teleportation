@@ -38,6 +38,8 @@ An optimal protocol also returns the $`n-1`$ unused input specimens on success. 
 
 Constant success for exact output requires spending a number of Bell pairs proportional to $`d`$ on the accepted branch. Spending that order suffices with enough input specimens. This counts the selected pair and any other pairs sacrificed before the success flag.
 
+The [three-project comparison](science/exact-return.md#how-exact-return-compares-across-three-tasks) follows the same contraction norm into [Quantum Program Composition](https://github.com/GoGoKo699/Quantum-Program-Composition/blob/main/science/exact_joint_return.md) and [Canonical Purification Cost](https://github.com/GoGoKo699/Canonical-Purification-Cost/blob/main/science/exact_joint_return.md). Exact composition with all spare Choi programs returned has the same success probability as exact Bell-port teleportation. Canonical purification has a different success probability because its target includes a known vacuum component.
+
 ## Read the science
 
 Start with the [scientific route](science/README.md) and [model and exact claims](science/model.md).
