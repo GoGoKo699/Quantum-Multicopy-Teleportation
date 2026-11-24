@@ -1,6 +1,6 @@
 # Thirty milestones for multicopy teleportation
 
-This is a common understanding map for the project. The first **12 milestones** assemble the objects and operational distinctions needed to state the problem. The remaining **18 milestones** connect the collective protocol, converse, implementation and meaning of the result. Both phases move from individual objects to the complete scientific account.
+This is a common understanding map for the project. The first **12 milestones** assemble the objects and operational distinctions needed to state the problem. The remaining **18 milestones** connect the deterministic frontier, finite implementation and heralded return laws. Both phases move from individual objects to the complete scientific account.
 
 The selected educational anchor is **John Watrous, *The Theory of Quantum Information* (2018)**. Section references below use the [verified source map](anchor.md#source-map). The textbook supplies foundations; the linked scientific pages supply this project's arguments. The map does not replace the proofs or prescribe a personal study schedule.
 
@@ -48,19 +48,19 @@ The selected educational anchor is **John Watrous, *The Theory of Quantum Inform
 
 ### M06 — Conditional success and deterministic quality differ
 
-- **Central question:** Which outcomes contribute to the score used by this project?
-- **Understanding target:** Distinguish a probability of exact heralded transfer from fidelity of the unconditional output, including failed branches.
-- **Dependencies and story role:** M03 and M05. Prevents a confusion that is already consequential in the one-port example.
-- **Conceptual connection:** Classical conditioning changes the state under discussion; averaging all outcomes restores the deterministic channel and its marginal constraints.
-- **Source pointers:** Watrous §§2.1.2, 2.3.2; [one-port distinction](../science/examples.md#one-port-exact-success-and-deterministic-output-differ).
+- **Central question:** Which outcomes enter each teleportation guarantee?
+- **Understanding target:** Distinguish exact heralded success probability, squared fidelity conditional on acceptance, and deterministic fidelity across all outcomes.
+- **Dependencies and story role:** M03 and M05. Establishes the three quantities that already differ in the one-port example.
+- **Conceptual connection:** A herald selects the branches to score. Averaging all outcomes restores the deterministic channel and its marginal constraints.
+- **Source pointers:** Watrous §§2.1.2, 2.3.2 and 3.2.1, [one-port distinction](../science/examples.md#one-port-exact-success-and-deterministic-output-differ), and [conditional fidelity](../science/exact-return.md).
 
 ### M07 — Score a joint quantum output
 
-- **Central question:** What does it mean to teleport a state and approximately return the unused resources together?
-- **Understanding target:** Use the project's squared fidelity convention; distinguish global product-target fidelity from a collection of marginal promises and from exact catalytic return.
-- **Dependencies and story role:** M02–M06. Defines the strengthened constructive target before its proof.
-- **Conceptual connection:** Fidelity monotonicity allows a global guarantee to imply an output-only guarantee, while accumulated reuse errors remain a separate question.
-- **Source pointers:** Watrous §§3.2.1–3.2.3; [fidelity conversion](anchor.md#notation-dictionary); [joint target](../science/model.md#constructive-theorem-one-joint-return-guarantee).
+- **Central question:** How are the teleported output and the returned resources scored together?
+- **Understanding target:** Compare the deterministic squared fidelity to a global product target with the requirement that spare pairs and specimens return exactly on an accepted branch.
+- **Dependencies and story role:** M02–M06. Defines the two return contracts before their proofs.
+- **Conceptual connection:** Tracing out the return registers passes a joint fidelity guarantee to the selected output. Exact return of a pure spare Bell pair also forces it to factor from the rest of an accepted branch.
+- **Source pointers:** Watrous §§3.2.1–3.2.3, [deterministic joint target](../science/model.md#constructive-theorem-one-joint-return-guarantee), and [exact-return contract](../science/exact-return.md).
 
 ### M08 — Remove the receiver correction
 
@@ -97,7 +97,7 @@ The selected educational anchor is **John Watrous, *The Theory of Quantum Inform
 ### M12 — Assemble the operational question
 
 - **Central question:** What must be fixed before the expression $d+d^2/n$ has scientific meaning?
-- **Understanding target:** State the input-copy promise, independent Bell-pair resource, Alice's freedom, Bob's restriction, unconditional squared fidelity and charged supplies in one account.
+- **Understanding target:** State the input-copy promise, independent Bell-pair resource, Alice's freedom and Bob's restriction. Specify whether the task scores every branch or imposes exact return obligations on accepted branches.
 - **Dependencies and story role:** M01–M11. Integrates the background phase into the exact problem the research solves.
 - **Conceptual connection:** The same asymptotic expression can describe different tasks; its controls, resources and output convention determine which theorem applies.
 - **Source pointers:** Watrous Chapters 2–3 and §6.3.1; [model and frontier](../science/model.md).
@@ -200,13 +200,13 @@ The selected educational anchor is **John Watrous, *The Theory of Quantum Inform
 - **Conceptual connection:** Coherently supplied quantum data can reduce stored-port cost before an estimate-then-prepare route learns an accurate classical input description.
 - **Source pointers:** Watrous §2.3 for measurements; [unequal-budget examples](../science/examples.md#the-intermediate-regime); [input-estimation comparison](../science/examples.md#why-learning-the-input-first-does-not-explain-every-regime); research attribution in [related work](../references/RELATED_WORK.md).
 
-### M25 — Reconcile both endpoints
+### M25 — Find the exact success probability with one pair spent
 
-- **Central question:** How does the new law agree with ordinary PBT and exact single-port multicopy teleportation?
-- **Understanding target:** Recover the $n=1$ constructive bound; at $m=1$ distinguish the exact useful probability from the unconditional output fidelity $1/d$.
-- **Dependencies and story role:** M06, M13 and M23. Tests the central account against cases where misinterpreting the score would produce a contradiction.
-- **Conceptual connection:** A loose constructive lower bound can coexist with an exactly known unconditional marginal; a heralding probability answers another question.
-- **Source pointers:** Watrous §§2.3.2, 6.3.1; [endpoint checks](../science/construction.md#5-the-two-endpoint-checks); [one-port story](../science/examples.md#one-port-exact-success-and-deterministic-output-differ).
+- **Central question:** Can combining all ports with all specimens help when each accepted branch must return every spare pair?
+- **Understanding target:** Explain why an exact Bell-pair return removes the spare half from the branch effect, and why covariance leaves separate weights for a canonical contraction subspace and its complement. State $`p_0=\max(m,n)/[d(\max(m,n)+d-1)]`$ and recover the single-port and one-specimen endpoints.
+- **Dependencies and story role:** M06–M09, M13–M14 and M20–M22. Brings the return requirement into the converse and identifies the attaining endpoint protocol.
+- **Conceptual connection:** Completeness constrains the sum over possible selected ports. With exact spare returns and one pair spent, the larger supply determines the optimum.
+- **Source pointers:** Watrous §§2.2.2, 2.3.1 and 7.2.1, [endpoint checks](../science/construction.md#5-the-two-endpoint-checks), and [exact-return proof](../science/exact-return.md).
 
 ### M26 — Retrieve a noisy stored channel
 
@@ -232,18 +232,18 @@ The selected educational anchor is **John Watrous, *The Theory of Quantum Inform
 - **Conceptual connection:** Spectral weight on the promised input controls approximation loss; whole-circuit finite precision is a different bound and must also be paid.
 - **Source pointers:** Watrous §§1.1.3, 1.2.2; [cutoff argument](../science/implementation.md#4-why-a-state-dependent-cutoff-preserves-the-global-target); [routing and precision](../science/implementation.md#5-routing-padding-and-finite-precision).
 
-### M29 — Separate inherited machinery from the contribution
+### M29 — Charge all the pairs spent on an accepted branch
 
-- **Central question:** What remains new after the closest teleportation, program and state-estimation results are credited?
-- **Understanding target:** Identify the finite-input interpolation, changed shared-port moment and port-selection converse, while retaining earlier single-port and known-state endpoints and the absence of an end-to-end runtime claim.
-- **Dependencies and story role:** M18 and M23–M28. Places the established result in its scientific context and fixes its limits.
-- **Conceptual connection:** A reused measurement method can support a distinct operational law, but neither shared terminology nor a favorable copy count establishes a broader speedup.
-- **Source pointers:** [Related work](../references/RELATED_WORK.md); [interpretation](../science/examples.md); the [source map](anchor.md#what-the-book-supplies-and-what-this-project-adds) distinguishes the educational anchor from research proof dependencies.
+- **Central question:** How much can success probability grow if Alice may spend up to $`\ell`$ pairs, counting the selected pair?
+- **Understanding target:** Explain the upper bound $`p\le\min(1,e\ell/d)`$ and how $`\ell`$ independent one-port protocols using $`d`$ specimens each attain its order when the supplies suffice. Include pairs from failed trials in the accepted branch's budget and allow the trials to consume input specimens.
+- **Dependencies and story role:** M07, M13, M20–M22 and M25. Extends the exact-output result to a budget with several pairs spent.
+- **Conceptual connection:** An accepted branch can preserve many spares while the pairs used along the way still count. At constant exact success the number spent has order at least $`d`$, even with many supplied pairs.
+- **Source pointers:** [Pair spending and exact success](../science/exact-return.md), [related work](../references/RELATED_WORK.md), and the [worked examples](../science/examples.md).
 
-### M30 — Tell and verify the complete story
+### M30 — Reconcile success probability, fidelity and return
 
-- **Central question:** Can the task, mechanism, matching bound and limits be explained as one connected result?
-- **Understanding target:** State the fixed-fidelity frontier with its promises, trace the constructive and converse arguments, explain the intermediate regime and channel application, and identify what the finite checks and return guarantee actually establish.
-- **Dependencies and story role:** M12–M29. Synthesizes the narrative phase from the original resource question to its supported answer.
-- **Conceptual connection:** Physical task, analytical theorem, finite implementation and verification evidence reinforce one another while retaining their different scopes.
-- **Source pointers:** [Scientific route](../science/README.md); [model](../science/model.md); [construction](../science/construction.md); [converse](../science/converse.md); [implementation](../science/implementation.md); [verification](../verification/README.md).
+- **Central question:** How does the best heralding probability change if the selected output may be approximate while spare returns stay exact?
+- **Understanding target:** Explain the optimal tradeoff $`P=p_0(1-1/d)/[F-1/d+p_0(1-F)]`$ for conditional squared fidelity $`F`$ from $`1/d`$ to $`1`$. Compare its endpoints with the deterministic fixed-fidelity resource frontier and the exact-output spending law. State which guarantees the finite checks test.
+- **Dependencies and story role:** M12–M29. Synthesizes the three return guarantees, the conditions under which they apply and the physical operations they charge.
+- **Conceptual connection:** Accepting more branches can lower conditional fidelity. The exact-return requirement keeps the operation on spare pairs fixed as Alice adjusts her acceptance rule.
+- **Source pointers:** [Conditional fidelity and exact return](../science/exact-return.md), [worked example](anchor.md#what-exact-return-changes), [deterministic resource frontier](../science/model.md), [finite implementation](../science/implementation.md), and [verification](../verification/README.md).

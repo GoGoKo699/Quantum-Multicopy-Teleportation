@@ -248,7 +248,7 @@ m_{F_0}(d,n)
 =\Theta_{F_0}\left(d+\frac{d^2}{n}\right).
 ```
 
-The constants depend on the fixed target fidelity. This is a matched asymptotic resource law, not an assertion that either finite bound in (1) is always attained. In particular, it leaves the optimal dependence on vanishing infidelity and the exact heralded multicopy/multiport success probability open.
+The constants depend on the fixed target fidelity. This is a matched asymptotic resource law, not an assertion that either finite bound in (1) is always attained. In particular, it leaves the optimal dependence on vanishing infidelity and the exact heralded multicopy/multiport success probability open when unused ports may be consumed without limit. The [exact-return analysis](exact-return.md) gives the optimum under exact Bell-pair return.
 
 The global-return construction attains (19), whereas the converse only demands one good output and imposes no return requirement. The return guarantee therefore does not change the fixed-fidelity order, even though reusing those approximate resources in a longer computation would require a separate accumulated-error analysis.
 
