@@ -128,7 +128,7 @@ Alice can also keep exact spare returns and permit a conditional squared output 
 P=\frac{p_0(1-1/d)}{F-1/d+p_0(1-F)}.
 ```
 
-For the one-port qubit example, requiring $`F=3/4`$ permits $`P=1/2`$. Requiring an exact output recovers $`P=1/3`$. The [exact-return proof](../science/exact-return.md) connects the three guarantees.
+For the one-port qubit example, requiring $`F=3/4`$ permits $`P=1/2`$. With probability $`3/4`$, Alice runs the exact herald, which succeeds one-third of the time. Otherwise, she accepts immediately, leaves Bob's qubit in $`I/2`$ and keeps one specimen. Each route contributes $`1/4`$ to the total acceptance probability, so the conditional fidelity is the average of $`1`$ and $`1/2`$. Requiring an exact output recovers $`P=1/3`$. The [exact-return proof](../science/exact-return.md) connects the three guarantees.
 
 ## What the book supplies and what this project adds
 

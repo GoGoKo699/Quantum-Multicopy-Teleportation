@@ -1,6 +1,6 @@
 # Learning the result
 
-How much can extra copies of an unknown input save when the receiver can only select a Bell port? At fixed uniform squared fidelity above one half, the deterministic task needs a port budget of order $`d+d^2/n`$. Here $`d`$ is the input dimension and $`n`$ is the number of identical pure specimens. A second task asks the sender to announce when the transfer is exact and all unused resources have been returned. Its optimal success probability for $`m`$ ports and $`n`$ specimens is $`\max(m,n)/[d(\max(m,n)+d-1)]`$.
+How much can extra copies of an unknown input save when the receiver can only select a Bell port? At any fixed uniform squared fidelity strictly between one half and one, the deterministic task needs a port budget of order $`d+d^2/n`$. Here $`d`$ is the input dimension and $`n`$ is the number of identical pure specimens. A second task asks the sender to announce when the transfer is exact and all unused resources have been returned. Its optimal success probability for $`m`$ ports and $`n`$ specimens is $`\max(m,n)/[d(\max(m,n)+d-1)]`$.
 
 Read the [Watrous bridge](anchor.md) for the physical story, source-to-project notation and a complete two-copy qubit example. Then follow the [30-milestone map](milestones.md): 12 background milestones assemble the operational language, and 18 narrative milestones connect the mechanism, lower bound, finite circuit and scientific meaning. The map describes this project's common understanding targets; the linked scientific pages remain authoritative for exact claims.
 

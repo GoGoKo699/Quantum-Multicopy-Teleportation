@@ -20,7 +20,7 @@ At $`F=1`$ the optimum is $`p_0`$. For $`F\le1/d`$ a protocol that always accept
 
 ## Why exact Bell return restricts Alice's instruments
 
-Work on the supplied input support $`\mathcal H_n\otimes V^{\otimes m}`$, where $`V=\mathbb C^d`$ is the Bell basis space and $`\mathcal H_n=\operatorname{Sym}^n(V)`$ contains the input specimens. The vectors $`|\psi\rangle^{\otimes n}`$ span $`\mathcal H_n`$. For a given accepted outcome choosing $`j`$, refine Alice's map into Kraus operators. The returned Bell state is pure. Positivity implies that each nonzero Kraus contribution has the same pure Bell marginal. This holds also when the accepted outcome contains a mixture of different selected-qudit states.
+Work on the supplied input support $`\mathcal H_n\otimes V^{\otimes m}`$, where $`V=\mathbb C^d`$ is the Bell basis space and $`\mathcal H_n=\mathrm{Sym}^n(V)`$ contains the input specimens. The vectors $`|\psi\rangle^{\otimes n}`$ span $`\mathcal H_n`$. For a given accepted outcome choosing $`j`$, refine Alice's map into Kraus operators. The returned Bell state is pure. Positivity implies that each nonzero Kraus contribution has the same pure Bell marginal. This holds also when the accepted outcome contains a mixture of different selected-qudit states.
 
 For one such Kraus operator, expand all supplied Bell pairs in their computational bases. The term with Bob's basis labels $`i_1,\ldots,i_m`$ has Alice input $`|\psi\rangle^{\otimes n}|i_1,\ldots,i_m\rangle`$ and initial amplitude $`d^{-m/2}`$. By exact return, its Alice output must be $`|i_{-j}\rangle`$ on the unselected Bell halves, tensored with a vector depending on $`\psi`$ and $`i_j`$ but independent of $`i_{-j}`$. Independence follows by comparing the coefficients of the known product Bell state with those of the Kraus output. Thus on every coherent input, and then by linear span on $`\mathcal H_n`$, each successful Kraus operator is the identity on the unselected halves tensored with a map on the specimens and the selected half. Known permutations are absorbed into the designated output ordering.
 
@@ -37,7 +37,7 @@ Any finer outcomes have been summed at this point. With $`\bar\psi`$ the complex
 ```math
 \begin{aligned}
 p_{\psi,j}
- &=\operatorname{Tr}\!\left[
+ &=\mathrm{Tr}\!\left[
      X_j\left(|\psi\rangle\langle\psi|^{\otimes n}\otimes I/d\right)
    \right],\\
 f_{\psi,j}
@@ -67,7 +67,7 @@ Here and below the effects act as the identity on the other ports. Since $`D_j D
 D_j\bigl(|\psi\rangle^{\otimes n}|i\rangle\bigr)
 =\sqrt n\,\psi_i|\psi\rangle^{\otimes(n-1)},
 \qquad
-\operatorname{Tr}_{B_j}Q_j=\frac{n}{n+d-1}I_{\mathcal H_n}.
+\mathrm{Tr}_{B_j}Q_j=\frac{n}{n+d-1}I_{\mathcal H_n}.
 ```
 
 To prove the converse, Haar average the effects under $`U^{\otimes n}\otimes\bar U^{\otimes m}`$ and then average over permutations of the ports. Both operations preserve feasibility. The Haar-mean success and score before averaging equal the corresponding values on each input after averaging. It is enough to bound these means because $`\inf_\psi p_\psi\le\mathbb E_\psi p_\psi`$ and the uniform constraint implies $`\mathbb E_\psi f_\psi\ge F\mathbb E_\psi p_\psi`$. This averaging is a calculation on Alice's effects.
@@ -83,7 +83,7 @@ L:=\left\|\sum_jQ_j\right\|
 
 For the norm proof, set $`S=\sum_j D_j^\dagger D_j`$. In the occupation basis of the specimens and the ordered computational basis of the ports, $`S`$ has entrywise nonnegative real coefficients. A maximizing vector can be taken with nonnegative coefficients, since replacing each entry by its modulus cannot decrease the Rayleigh quotient. Averaging that vector over port permutations is nonzero and gives another largest-eigenvalue vector, now in the symmetric port sector. This step addresses the full ordered port space.
 
-On $`\operatorname{Sym}^n(V)\otimes\operatorname{Sym}^m(\bar V)`$ let $`b_i`$ denote the annihilation maps on the port occupations and $`C=\sum_i a_i b_i`$. The sum over all ports of $`|i\rangle\langle k|`$ is $`b_i^\dagger b_k`$ on that sector, so $`S=C^\dagger C`$ there. On the two graded occupation spaces the commutator is
+On $`\mathrm{Sym}^n(V)\otimes\mathrm{Sym}^m(\bar V)`$ let $`b_i`$ denote the annihilation maps on the port occupations and $`C=\sum_i a_i b_i`$. The sum over all ports of $`|i\rangle\langle k|`$ is $`b_i^\dagger b_k`$ on that sector, so $`S=C^\dagger C`$ there. On the two graded occupation spaces the commutator is
 
 ```math
 [C,C^\dagger]=d+N_a+N_b,
@@ -152,7 +152,7 @@ p_\psi\le
 
 At $`\ell=1`$ it gives the simpler ceiling $`1/d`$, while the sharp finite result is $`p_0`$. For $`\ell\ge d`$ the bound from $`t=0`$ is just one.
 
-To prove the bound, exact return implies that the effect of each outcome is $`X_{j,S}\otimes I_{S^c}`$ by the Bell-basis argument above. Fix $`\psi`$, evaluate the copies in $`|\psi\rangle^{\otimes n}`$, and denote the resulting positive operator on the spent Alice ports by $`Z_{j,S}`$. Under the physical input all port marginals are maximally mixed. The reduced accepted output is proportional to the transpose of $`\operatorname{Tr}_{S\setminus\{j\}}Z_{j,S}`$. Exactness makes this partial trace proportional to $`|\bar\psi\rangle\langle\bar\psi|`$. Positivity implies that $`Z_{j,S}`$ has support on that ray at port $`j`$, and hence factors as $`|\bar\psi\rangle\langle\bar\psi|\otimes W_{j,S}`$ with $`W_{j,S}\ge0`$. This reasoning includes zero-probability branches.
+To prove the bound, exact return implies that the effect of each outcome is $`X_{j,S}\otimes I_{S^c}`$ by the Bell-basis argument above. Fix $`\psi`$, evaluate the copies in $`|\psi\rangle^{\otimes n}`$, and denote the resulting positive operator on the spent Alice ports by $`Z_{j,S}`$. Under the physical input all port marginals are maximally mixed. The reduced accepted output is proportional to the transpose of $`\mathrm{Tr}_{S\setminus\{j\}}Z_{j,S}`$. Exactness makes this partial trace proportional to $`|\bar\psi\rangle\langle\bar\psi|`$. Positivity implies that $`Z_{j,S}`$ has support on that ray at port $`j`$, and hence factors as $`|\bar\psi\rangle\langle\bar\psi|\otimes W_{j,S}`$ with $`W_{j,S}\ge0`$. This reasoning includes zero-probability branches.
 
 Test completeness on the same specimen input but replace each Alice port marginal by the normalized state
 
