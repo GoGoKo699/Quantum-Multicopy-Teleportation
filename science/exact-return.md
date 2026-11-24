@@ -89,7 +89,7 @@ On $`\mathrm{Sym}^n(V)\otimes\mathrm{Sym}^m(\bar V)`$ let $`b_i`$ denote the ann
 [C,C^\dagger]=d+N_a+N_b,
 ```
 
-where $`N_a,N_b`$ count the two degrees. Put $`\Lambda(n,m)=\|C^\dagger C\|`$ on the degree $`(n,m)`$ sector. The largest eigenvalue of $`C^\dagger C`$ equals that of $`CC^\dagger`$ on $`(n-1,m-1)`$ for positive $`n,m`$. Thus
+where $`N_a,N_b`$ count the two degrees. Let $`\Lambda(n,m)`$ be the largest eigenvalue of $`C^\dagger C`$ on the degree $`(n,m)`$ sector. It equals the largest eigenvalue of $`CC^\dagger`$ on $`(n-1,m-1)`$ for positive $`n,m`$. Thus
 
 ```math
 \Lambda(n,m)=\Lambda(n-1,m-1)+d+n+m-2,
