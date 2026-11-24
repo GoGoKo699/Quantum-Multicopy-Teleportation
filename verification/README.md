@@ -7,6 +7,7 @@ From the repository root, using Python 3.10 or later:
 ```bash
 python3 -m pip install -r requirements.txt
 python3 verification/verify.py
+python3 verification/check_exact_return.py
 ```
 
 The command writes [results.json](results.json) only after every check passes. To preserve a previous report, choose a different path:
@@ -16,6 +17,8 @@ python3 verification/verify.py --output /tmp/multicopy-teleportation-results.jso
 ```
 
 The only dependency is NumPy. Random input states and unitaries use the fixed seed `20261116`. The report records the NumPy version and numerical tolerance; small floating differences between supported versions are expected. No unknown unitary or input-state description is used to construct the tested processor. Those descriptions enter only the generated source and comparison target.
+
+The second command checks finite-register identities used in the [exact Bell-return theorem](../science/exact-return.md). It tests representative parameters and complex states, including the spectral bound for ordered ports, the normalized exact-return instrument, selected points of the success–fidelity tradeoff, and the Bell-pair expenditure bound.
 
 ## What is checked
 

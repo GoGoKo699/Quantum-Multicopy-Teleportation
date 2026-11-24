@@ -20,3 +20,14 @@ The comparison below was checked on 16 November 2026. It records the scope of in
 Related internal purification and thermal-teleportation accounts were checked for task overlap. Their inputs, target outputs and receiver control differ. They are not proof dependencies of the frontier here.
 
 The comparison covers current accessible versions of the closest identified accounts and targeted searches for multicopy/multiport combinations. An unavailable or subsequently revised source may require an update. The reader-facing claims do not rely on a claim of exhaustive novelty certification.
+
+## Exact Bell-return comparisons
+
+| Source and inspected scope | Role in this project |
+| --- | --- |
+| [Grosshans et al., arXiv:2409.10393v2](https://arxiv.org/html/2409.10393v2), main theorem and §6 | Exact single-port endpoint and the explicit question of multiple inputs and ports |
+| [Kopszak et al., arXiv:2504.00710v2](https://arxiv.org/html/2504.00710v2), §§2.1 and 4.1.1 | Conditional degradation of unused Bell pairs after a standard successful probabilistic protocol |
+| [Christandl et al., Theorem 1.3](https://doi.org/10.1007/s00220-020-03884-0) | Exact-output probabilistic port teleportation approaches unit success at fixed dimension when spectator return is unrestricted |
+| [Canonical Purification Cost, exact frontier](https://github.com/GoGoKo699/Canonical-Purification-Cost/blob/fc4651999bff3c65ab7992cda015751ae8b5715f/science/exact_frontier.md), pure-output rigidity and unequal harmonic sectors | Polynomial exactness and symmetric contraction methods for a different supplied-state model |
+
+The [exact-return proof](../science/exact-return.md) gives the model and deductions these works are compared against.

@@ -52,6 +52,10 @@ Tracing out the returned systems gives the same lower bound on $F_\psi$. Return 
 
 The [construction proof](construction.md) gives the physical Kraus operators on the whole ordered input space. In particular, its kernel/failure outcome selects an existing Bob port and respects the same operational contract.
 
+## Heralding with exact Bell-pair return
+
+The same input contract admits a success or failure flag. On each accepted branch the designated unused resource pairs must form their original pure Bell-pair product. The [exact-return account](exact-return.md) gives the optimum worst-case success probability, the tradeoff with selected-output fidelity, and bounds when some additional Bell pairs may be spent. A failure carries no return guarantee.
+
 ## Converse for every port-selection protocol
 
 Every protocol in the contract above obeys
@@ -95,7 +99,7 @@ m_{\mathrm{opt}}(d,n;F_0)
 =\Theta_{F_0}\!\left(d+\frac{d^2}{n}\right).
 ```
 
-The constants are uniform over all integer $d\ge2,n\ge1$ and depend on $F_0$. This is a fixed-fidelity resource law. It does not determine the optimal constants, the exact heralded success probability, or the sharp joint dependence as $F_0\uparrow1$.
+The constants are uniform over all integer $d\ge2,n\ge1$ and depend on $F_0$. This is a fixed-fidelity resource law. It does not determine the optimal constants for approximate return, the exact heralded optimum without a return requirement, or the sharp joint dependence as $F_0\uparrow1$.
 
 The [finite compiled circuit](implementation.md) attains the same fixed-error order, with a larger sufficient constant. An abstract POVM is therefore not being counted as a free physical operation.
 
@@ -123,4 +127,4 @@ For unitary $\mathcal E(\rho)=U\rho U^\dagger$, the target output is $U|\psi\ran
 
 ## Reading route
 
-Read [construction](construction.md) for the common-branch polar mechanism, [converse](converse.md) for necessity, [implementation](implementation.md) for the Alice-only circuit, and [examples](examples.md) for the unequal-budget regimes. [Related work](../references/RELATED_WORK.md) separates inherited ingredients from the result proved here.
+Read [construction](construction.md) for the common-branch polar mechanism, [converse](converse.md) for necessity, [implementation](implementation.md) for the Alice-only circuit, and [examples](examples.md) for the unequal-budget regimes. The [exact-return proof](exact-return.md) studies the heralded regime. [Related work](../references/RELATED_WORK.md) separates inherited ingredients from the result proved here.

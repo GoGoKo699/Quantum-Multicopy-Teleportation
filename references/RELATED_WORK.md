@@ -1,6 +1,6 @@
 # Attribution and comparison
 
-The task studied here is deterministic approximate **multicopy port teleportation**: $n$ identical unknown pure input specimens, $m$ independent maximally entangled resource pairs, one output, and no receiver correction beyond port selection. Its [fixed-fidelity frontier](../science/model.md) is established within this contract. Exact heralded teleportation, general programmable processors, and sending several independent inputs are different tasks.
+The task studied here is deterministic approximate **multicopy port teleportation**: $n$ identical unknown pure input specimens, $m$ independent maximally entangled resource pairs, one output, and no receiver correction beyond port selection. Its [fixed-fidelity frontier](../science/model.md) is established within this contract. The [exact Bell-return analysis](../science/exact-return.md) adds a heralded task in the same architecture. General programmable processors and sending several independent inputs have different contracts.
 
 ## What is inherited
 
@@ -20,9 +20,17 @@ Grosshans, Horodecki, Murao, Młynik, Quintino, Studziński and Yoshida [5] prov
 p(d,n)=\frac{n}{d(d+n-1)}.
 ```
 
-The useful polar branch here reproduces that endpoint. Their April 2026 version identifies the simultaneous multicopy/multiport scenario as a future direction in Section 6. Our result establishes a deterministic approximate fixed-fidelity resource frontier, with a stronger joint-return construction. It does not claim their exact-heralded objective is solved for arbitrary port and input budgets.
+The useful polar branch here reproduces that endpoint. Their April 2026 version identifies the simultaneous multicopy/multiport scenario as a future direction in Section 6. Our result establishes a deterministic approximate fixed-fidelity resource frontier, with a stronger joint-return construction. The [exact-return theorem](../science/exact-return.md) resolves the simultaneous multicopy and multiport objective with perfect return of unselected Bell pairs and recovers their endpoint at one port. The general exact-output problem remains open when other ports may be consumed without a cap.
 
 Mafi and Moghaddam [10] implement small-copy single-port teleportation and program retrieval on superconducting hardware. In their generalized multi-qubit illustration, several Bell pairs encode one higher-dimensional operation; they are not independent alternative program ports. Their experimental circuit and noise study do not establish the finite-input/multiport frontier proved here.
+
+## Exact return and probabilistic recycling
+
+Kopszak et al. [14] analyze the successful-branch recycling fidelity of the standard one-input probabilistic port-based protocol and its subsequent reuse. The protocol can teleport the selected state exactly while changing the unselected entanglement. Christandl et al. [15] show that standard probabilistic port-based teleportation with independent EPR pairs has success tending to one for fixed input dimension. The exact-return theorem gives the optimum over the allowed sender instruments whose accepted branches restore the full unused Bell product. At one input and arbitrarily many ports that optimum tends to $`1/d`$.
+
+The [exact canonical-purification proof][canon] develops exact-output rigidity and the symmetric contraction commutator for independently supplied pure and conjugate specimens. These are antecedents for the proof methods. The present model starts with an ordered register of local halves of independent Bell pairs. The spectral reduction on that space and the requirement to return designated Bell pairs support the exact-return and expenditure results.
+
+[canon]: https://github.com/GoGoKo699/Canonical-Purification-Cost/blob/fc4651999bff3c65ab7992cda015751ae8b5715f/science/exact_frontier.md
 
 ## Known-state port preparation and input estimation
 
@@ -64,3 +72,6 @@ Likewise, applying an arbitrary CPTP channel to the outer resource halves is inh
 11. M. Mozrzymas, M. Studziński and P. Kopszak, *Optimal Multi-port-based Teleportation Schemes*, Quantum **5**, 477 (2021). [DOI](https://doi.org/10.22331/q-2021-06-17-477), [arXiv:2011.09256v3](https://arxiv.org/abs/2011.09256v3).
 12. R. Okada, K. Kato and F. Buscemi, *Port-based telecloning of an unknown quantum state*, Physical Review A **111**, 052408 (2025). [DOI](https://doi.org/10.1103/PhysRevA.111.052408), [arXiv:2501.16878v2](https://arxiv.org/abs/2501.16878v2). This comparator concerns multiple outputs; its inspected scope is recorded in the source index.
 13. V. Brzić, S. Yoshida, M. Murao and M. T. Quintino, *Higher-order quantum computing with known input states*, [arXiv:2510.20530v2](https://arxiv.org/html/2510.20530v2), 16 November 2025. Sections 8–9 and the setup distinguish classical input knowledge from a finite specimen supply.
+
+14. P. Kopszak, D. Grinko, A. Burchardt, M. Ozols, M. Studziński and M. Mozrzymas, *Entanglement Recycling in Port-Based Teleportation*, IEEE Transactions on Information Theory **72**, 2343–2357 (2026). [DOI](https://doi.org/10.1109/TIT.2026.3656762), [arXiv:2504.00710v2](https://arxiv.org/html/2504.00710v2).
+15. M. Christandl, F. Leditzky, C. Majenz, G. Smith, F. Speelman and M. Walter, *Asymptotic Performance of Port-Based Teleportation*, Communications in Mathematical Physics **381**, 379–451 (2021). [DOI](https://doi.org/10.1007/s00220-020-03884-0), Theorem 1.3.

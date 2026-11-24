@@ -10,7 +10,7 @@ Imagine an unknown quantum input arriving after an operation has already been st
 
 Here Alice receives several identical specimens of the input. She cannot read their amplitudes without disturbance or assume access to their preparation circuit. Alice also holds one half of each shared Bell pair; Bob holds the other halves. Alice may process all her registers together. Bob may select and reorder ports, but cannot apply a conditional correction or replace an output by a freshly prepared state.
 
-The question is how much the input specimens can reduce the Bell-port supply. For a fixed uniform squared fidelity $F_0\in(1/2,1)$, the answer is a port budget of order $d+d^2/n$. Its constants depend on the chosen fixed fidelity. The [model](../science/model.md) remains authoritative for every assumption.
+The deterministic question is how much the input specimens can reduce the Bell-port supply. For a fixed uniform squared fidelity $`F_0\in(1/2,1)`$, the required budget has order $`d+d^2/n`$, with constants that depend on the chosen fidelity. The [model](../science/model.md) specifies the task. [Exact return](../science/exact-return.md) asks how often Alice can flag an exact transfer while preserving the unused Bell pairs and returning $`n-1`$ specimens.
 
 ## Source map
 
@@ -21,12 +21,12 @@ These are targeted entry points, not a requirement to read the book in order. Se
 | §§1.1.2–1.1.3 | Positive operators, spectral decompositions, singular values and operator norms | [Bell-sum and polar argument](../science/construction.md); [finite encoding](../science/implementation.md) |
 | §1.2.2 | Expectations and finite-dimensional probability tools | [Moment bound](../science/construction.md#3-the-two-moments-that-determine-the-bound); [spectral cutoff](../science/implementation.md#4-why-a-state-dependent-cutoff-preserves-the-global-target) |
 | §§2.1.1–2.1.3 | Registers, product states, reductions and purifications | [Input contract and return target](../science/model.md) |
-| §§2.2.1–2.2.2 | Channels, complete positivity, Kraus and Choi representations | [Physical instrument](../science/construction.md#1-an-alice-only-bell-sum-instrument); [stored-channel retrieval](../science/construction.md#6-stored-channel-retrieval) |
+| §§2.2.1–2.2.2 | Channels, complete positivity, Kraus and Choi representations | [Physical instrument](../science/construction.md#1-an-alice-only-bell-sum-instrument), [exact-return factorization](../science/exact-return.md), and [stored-channel retrieval](../science/construction.md#6-stored-channel-retrieval) |
 | §§2.3.1–2.3.2 | Measurement effects and outcome probabilities | [Alice POVM reduction](../science/converse.md#1-every-alice-protocol-gives-a-port-povm) |
 | §§3.2.1–3.2.3 | Fidelity, its characterizations and monotonicity | [Joint return and channel extension](../science/construction.md); [return and reuse](../science/examples.md#return-and-reuse) |
 | §6.3.1 | Teleportation and the role of receiver corrections | [Restricted receiver model](../science/model.md#operational-contract); [worked example below](#one-complete-small-example) |
 | §7.1.1 | Symmetric vectors and symmetric-subspace projectors | [Common routed output](../science/construction.md#2-symmetry-gives-one-common-polar-output) |
-| §§7.2.1–7.2.2 | Unitary-invariant measures and their applications | [Haar score identity](../science/converse.md#2-the-haar-score-identity) |
+| §§7.2.1–7.2.2 | Unitary-invariant measures and their applications | [Haar score identity](../science/converse.md#2-the-haar-score-identity) and [covariant exact-return effects](../science/exact-return.md) |
 
 The map uses the 2018 book, rather than the earlier course notes with different numbering. Chapter 7 is especially useful because it connects the repeated-copy promise to finite symmetric-projector identities. The concrete Bell-sum moments and port converse are proved in this repository.
 
@@ -110,10 +110,30 @@ That is the constructive part. For necessity, averaging the exact fidelity score
 
 In the intermediate regime, for example $n$ of order $\sqrt d$, the required port supply has order $d^{3/2}$ rather than the one-specimen order $d^2$. Once $n$ reaches order $d$, the port supply saturates at order $d$. The [unequal-budget examples](../science/examples.md#the-intermediate-regime) explain why the regime before input tomography is accurate is the significant allocation change.
 
+## What exact return changes
+
+For $`m=1,n=2,d=2`$, the useful branch above attains the exact-return optimum $`1/3`$. For any $`m,n\ge1`$, the optimum is governed by the larger supply:
+
+```math
+p_0=\frac{\max(m,n)}{d[\max(m,n)+d-1]}.
+```
+
+In an accepted exact branch, a spare Bell pair is restored as a pure state on both sides. Alice's branch operation therefore acts trivially on that pair's half after the return registers are ordered. Twirling the selected-port effect gives separate weights for the Bell-contraction subspace and its complement. Completeness couples the effects for all possible selected ports and yields the optimum. Either use all ports with one specimen or use one port with all specimens, choosing the larger supply.
+
+The resource count changes when more pairs can be spent. If at most $`\ell`$ pairs, including the selected pair, need not be returned on an accepted branch, then $`p\le\min(1,e\ell/d)`$. When $`m\ge\ell`$ and $`n\ge\ell d`$, Alice can try $`\ell`$ independent one-port transfers with $`d`$ specimens each. Their probability of at least one exact output has order $`\min(1,\ell/d)`$. The demonstration charges the pairs used in failed trials whenever another trial succeeds and permits the trials to consume input specimens.
+
+Alice can also keep exact spare returns and permit a conditional squared output fidelity $`F`$ between $`1/d`$ and $`1`$. The optimal success probability traces the curve
+
+```math
+P=\frac{p_0(1-1/d)}{F-1/d+p_0(1-F)}.
+```
+
+For the one-port qubit example, requiring $`F=3/4`$ permits $`P=1/2`$. Requiring an exact output recovers $`P=1/3`$. The [exact-return proof](../science/exact-return.md) connects the three guarantees.
+
 ## What the book supplies and what this project adds
 
-Watrous provides the mathematical foundations for states, channels, measurements, fidelity, teleportation and invariant averages. This project supplies the simultaneous finite-input/multiport task, the collective moment calculation, matching port-selection converse, joint-return statement and charged finite circuit. The [research attribution](../references/RELATED_WORK.md) separately credits port-based measurements, single-port multicopy teleportation, known-state preparation, the earlier two-Choi-pool construction, singular-value transformation and phase compilation.
+Watrous provides the mathematical foundations for states, channels, measurements, fidelity, teleportation and invariant averages. This project supplies the simultaneous finite-input/multiport task, the collective moment calculation, matching port-selection converse, charged finite circuit and optimal heralded return laws. The [research attribution](../references/RELATED_WORK.md) separately credits port-based measurements, single-port multicopy teleportation, known-state preparation, the earlier two-Choi-pool construction, singular-value transformation and phase compilation.
 
 The finite circuit requires research ingredients beyond the textbook. [Implementation](../science/implementation.md) states those ingredients and their resource/error accounting directly. They are proof dependencies, not additional educational anchors or an implicit requirement to learn an unrelated curriculum first.
 
-Keep the result at its stated scope: identical pure specimens rather than an arbitrary reference-entangled input; Bob selecting a supplied port rather than applying general quantum processing; a fixed-fidelity resource frontier rather than exact heralded optimality; approximate joint return rather than an exact reusable catalyst. Stored noisy channels inherit the construction, while unrestricted programmable-processor optimality and end-to-end application advantage are not established.
+The deterministic resource frontier and the heralded return laws use identical pure specimens and a receiver restricted to selecting a supplied port. The stored noisy-channel extension follows from the deterministic construction by applying the same channel to each port. The exact-return analysis concerns the shared Bell-pair model.

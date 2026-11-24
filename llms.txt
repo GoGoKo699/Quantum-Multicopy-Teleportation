@@ -1,10 +1,11 @@
 # Quantum Multicopy Teleportation
 
-This repository studies correction-free port teleportation with m independent Bell ports and n identical unknown pure d-dimensional input specimens. Fixed-error optimal port order is Theta(d+d^2/n). Stored-channel retrieval inherits the construction, including approximate global return. The lower bound is restricted to port-selection protocols.
+This repository studies correction-free port teleportation with m independent Bell ports and n identical unknown pure d-dimensional input specimens. Fixed-error optimal port order is Theta(d+d^2/n). Stored-channel retrieval inherits the construction, including approximate global return. The lower bound is restricted to port-selection protocols. Heralded exact return of all unused Bell pairs has sharp success max(m,n)/[d(max(m,n)+d-1)], with an attained conditional output-fidelity frontier and a branchwise Bell-pair expenditure law.
 
 ## Read by question
 
 - Contract, exact finite bounds, fixed-error theorem and channel application: science/model.md
+- Exact Bell-pair return, successful-output fidelity, and branchwise Bell-pair expenditure: science/exact-return.md
 - Physical Kraus normalization, branch symmetry, Bell moments and joint return: science/construction.md
 - Exact Haar score, arbitrary sender instruments and port-only necessity: science/converse.md
 - Sender-only projected encoding, QSVT cutoff, known gates and finite precision: science/implementation.md
