@@ -130,6 +130,8 @@ P=\frac{p_0(1-1/d)}{F-1/d+p_0(1-F)}.
 
 For the one-port qubit example, requiring $`F=3/4`$ permits $`P=1/2`$. With probability $`3/4`$, Alice runs the exact herald, which succeeds one-third of the time. Otherwise, she accepts immediately, leaves Bob's qubit in $`I/2`$ and keeps one specimen. Each route contributes $`1/4`$ to the total acceptance probability, so the conditional fidelity is the average of $`1`$ and $`1/2`$. Requiring an exact output recovers $`P=1/3`$. The [exact-return proof](../science/exact-return.md) connects the three guarantees.
 
+The same norm occurs when both pools consist of unknown unitary Choi programs and when the pools consist of a pure state and its conjugate. Set $`d=m=n=2`$ in the [three-project comparison](../science/exact-return.md#how-exact-return-compares-across-three-tasks). With exact joint return, the two-port teleportation task and Choi composition each succeed with probability $`1/3`$. Canonical purification succeeds with probability $`4/5`$. Track which registers each protocol must return and how the vacuum part of the purification enters the normalization.
+
 ## What the book supplies and what this project adds
 
 Watrous provides the mathematical foundations for states, channels, measurements, fidelity, teleportation and invariant averages. This project supplies the simultaneous finite-input/multiport task, the collective moment calculation, matching port-selection converse, charged finite circuit and optimal heralded return laws. The [research attribution](../references/RELATED_WORK.md) separately credits port-based measurements, single-port multicopy teleportation, known-state preparation, the earlier two-Choi-pool construction, singular-value transformation and phase compilation.
